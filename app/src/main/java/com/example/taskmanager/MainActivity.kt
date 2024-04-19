@@ -47,8 +47,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     //FirstScreen()
-                    //SecondScreen(modifier = Modifier.fillMaxSize())
-                    ThirdScreen()
+                    SecondScreen(modifier = Modifier.fillMaxSize())
+                    //ThirdScreen()
                 }
             }
         }
@@ -93,7 +93,7 @@ fun SecondScreen(modifier: Modifier = Modifier) {
         modifier = modifier) {
         Image(
             painter = image,
-            contentDescription = null,
+            contentDescription = "",
         )
         Text(
             text = "All tasks completed",
@@ -203,12 +203,12 @@ fun ThirdScreen(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
     TaskManagerTheme {
-        //FirstScreen()
+        FirstScreen()
         //SecondScreen(modifier = Modifier.fillMaxSize())
-        ThirdScreen()
+        //ThirdScreen()
     }
 }
